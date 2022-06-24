@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function addParagraph() {
+      const input = document.getElementById("textArea").value;
+      const textNode = document.createTextNode(input);
+      const newElements = document.createElement("p");
+      newElements.appendChild(textNode);
+      document.getElementById("story").appendChild(newElements);
+      document.getElementById("textArea").value = "";
+    }
+  </script>
+
+  <body>
+    <div>
+      <h1>Kanye West's Shrimp Po Boy</h1>
+      <textarea id="textArea"></textarea>
+      <button onclick="addParagraph()">Add Paragraph</button>
+    </div>
+    <div id="story"></div>
+  </body>
+</html>
